@@ -25,6 +25,7 @@ public class DataAutoConfiguration {
 	 */
 	@Bean
 	public MybatisPlusInterceptor mybatisPlusInterceptor() {
+		// 这里一定要注意添加顺序，比如有数据权限，那么把数据权限放在分页之前
 		MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
 		interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
 		interceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());

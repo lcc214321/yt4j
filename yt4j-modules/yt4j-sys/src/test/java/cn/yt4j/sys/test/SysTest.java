@@ -26,7 +26,7 @@ public class SysTest {
 	 */
 	@Test
 	public void encode() {
-		System.out.println(stringEncryptor.encrypt("1234232123"));
+		System.out.println(stringEncryptor.encrypt("root"));
 	}
 
 	/**
